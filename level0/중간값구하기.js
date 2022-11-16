@@ -4,4 +4,5 @@ function solution(array) {
   });
   return array[Math.floor(array.length / 2)];
 }
-ddd
+
+
