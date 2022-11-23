@@ -10,3 +10,4 @@ function solution(num_list) {
   }
   return [evenNum, oddNum];
 }
+
