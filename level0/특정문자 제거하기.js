@@ -16,3 +16,5 @@ console.log(text.replace(regexOne, "___")); // abcaba___abbbcAbc
 console.log(text.replace(regexAll, "___")); // abcaba___abbbc___
 console.log(text.replace(regexAllCase, "___")); // ___aba___abbbc___
 console.log(text); // abcabaAbcabbbcAbc
+
+
