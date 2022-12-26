@@ -66,7 +66,7 @@ console.log(charCount("lH79jjklo"));
 // }
 // console.log(charCount("llo"));
 
-//곰팡이 없애기
+// 곰팡이 없애기
 let basket = [
   ["양파", "곰팡이"],
   ["곰팡이", "빵", "딸기잼"],
@@ -84,4 +84,3 @@ function removeGerm(arr) {
   }
   return arr;
 }
-
