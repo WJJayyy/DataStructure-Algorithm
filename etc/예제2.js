@@ -7,7 +7,7 @@ function validAnagram(first, second) {
     let letter = first[i];
     lookup[letter] ? (lookup[letter] += 1) : (lookup[letter] = 1);
   }
-  console.log(lookup);
+  console.log("1", lookup);
 
   for (let i = 0; i < second.length; i++) {
     let letter = second[i];
@@ -17,10 +17,10 @@ function validAnagram(first, second) {
       lookup[letter] -= 1;
     }
   }
+  console.log("2", lookup);
   return true;
 }
 
-console.log(validAnagram('aaz', 'zza'))
 // validAnagram('', '') // true
 // validAnagram('aaz', 'zza') // false
 // validAnagram('anagram', 'nagaram') // true
@@ -29,3 +29,29 @@ console.log(validAnagram('aaz', 'zza'))
 // validAnagram('amanaplanacanalpanama', 'acanalmanplanpamana') // false
 // validAnagram('qwerty', 'qeywrt') // true
 // validAnagram('texttwisttime', 'timetwisttext') // true
+
+function Anagram(first, second) {
+  let result = {};
+  if (first.length !== second.length) {
+    return false;
+  }
+  for (let i = 0; i < first.length; i++) {
+    let char = first[i];
+    result[char] ? (result[char] += 1) : (result[char] = 1);
+  }
+  console.log(result);
+
+  for (let i = 0; i < second.length; i++) {
+    let char = second[i];
+    if (result[char]) {
+      result[char] -= 1;
+    } else {
+      return false;
+    }
+  }
+  console.log(result);
+  return true;
+}
+
+console.log(Anagram("aaz", "zza"));
+
