@@ -23,42 +23,42 @@ function charCount(str) {
 }
 console.log(charCount("hello"));
 
-//2.
-function charCount(str) {
-  const result = {};
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i].toLowerCase();
-    if (!result[char]) {
-      result[char] = 0;
-    }
-    result[char]++;
-  }
-  return result;
-}
-console.log(charCount("llo"));
+// //2.
+// function charCount(str) {
+//   const result = {};
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i].toLowerCase();
+//     if (!result[char]) {
+//       result[char] = 0;
+//     }
+//     result[char]++;
+//   }
+//   return result;
+// }
+// console.log(charCount("llo"));
 
-//3.
-function charCount(str) {
-  const result = {};
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i].toLowerCase();
-    /[a-z0-9]/.test(char)
-      ? result[char] > 0
-        ? result[char]++
-        : (result[char] = 1)
-      : alert("not regexp");
-  }
-  return result;
-}
-console.log(charCount("lH79jjklo"));
+// //3.
+// function charCount(str) {
+//   const result = {};
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i].toLowerCase();
+//     /[a-z0-9]/.test(char)
+//       ? result[char] > 0
+//         ? result[char]++
+//         : (result[char] = 1)
+//       : alert("not regexp");
+//   }
+//   return result;
+// }
+// console.log(charCount("lH79jjklo"));
 
-//4.
-function charCount(str) {
-  const result = {};
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i].toLowerCase();
-    !result[char] ? (result[char] = 1) : result[char]++;
-  }
-  return result;
-}
-console.log(charCount("llo"));
+// //4.
+// function charCount(str) {
+//   const result = {};
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i].toLowerCase();
+//     !result[char] ? (result[char] = 1) : result[char]++;
+//   }
+//   return result;
+// }
+// console.log(charCount("llo"));
