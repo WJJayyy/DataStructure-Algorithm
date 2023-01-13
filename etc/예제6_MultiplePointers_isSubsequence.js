@@ -11,19 +11,19 @@ function isSubsequence(str1, str2) {
   while (i < str1.length && j < str2.length) {
     let char1 = str1[i];
     let char2 = str2[j];
+    console.log(char1, char2);
+    console.log(i, j);
     if (char1 === char2) {
       i++;
     }
     j++;
-    console.log(char1, char2);
-    console.log(i, j);
   }
   if (i === str1.length) return true;
   else return false;
 }
 
 // console.log(isSubsequence("hello", "hello world")); // true
-// console.log(isSubsequence_("hello", "hello world")); // true
-// console.log(isSubsequence("sing", "sting")); // true
-console.log(isSubsequence("abc", "abracadabra")); // true
+// console.log(isSubsequence("hello", "hello world")); // true
+console.log(isSubsequence("sing", "sting")); // true
+// console.log(isSubsequence("abc", "abracadabra")); // true
 // console.log(isSubsequence("abc", "acb")); // false (order matters)

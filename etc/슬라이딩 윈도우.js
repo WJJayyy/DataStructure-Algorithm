@@ -11,12 +11,13 @@ function maxSubarraySum(arr, num) {
   for (let i = num; i < arr.length; i++) {
     tempSum = tempSum - arr[i - num] + arr[i];
     maxSum = Math.max(maxSum, tempSum);
+    console.log(maxSum, tempSum);
   }
   return maxSum;
 }
-console.log(maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 3));
+console.log(maxSubarraySum([4, 7, 9, 2, 1, 8, 5, 6, 3], 3));
 
-maxSubarraySum([100, 200, 300, 400], 2); // 700
-maxSubarraySum([1, 4, 2, 10, 23, 3, 1, 0, 20], 4); // 39
-maxSubarraySum([-3, 4, 0, -2, 6, -1], 2); // 5
-maxSubarraySum([2, 3], 3); // null
+// maxSubarraySum([100, 200, 300, 400], 2); // 700
+// maxSubarraySum([1, 4, 2, 10, 23, 3, 1, 0, 20], 4); // 39
+// maxSubarraySum([-3, 4, 0, -2, 6, -1], 2); // 5
+// maxSubarraySum([2, 3], 3); // null
