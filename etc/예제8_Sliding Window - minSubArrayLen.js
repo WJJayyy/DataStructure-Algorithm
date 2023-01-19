@@ -8,28 +8,24 @@
 // Space Complexity - O(1)
 
 function minSubArrayLen(arr, val) {
-  var sumVal = arr[0];
-  var left = 0;
-  var right = 0;
-  var minLen = Infinity;
-
+  let sumVal = arr[0];
+  let left = 0;
+  let right = 0;
+  let minLength = Infinity;
   for (let i = 0; right < arr.length; i++) {
-    //크거나 같으면 왼쪽이동
-    if (sumVal >= val) {
-      sumVal -= arr[left];
-      minLen = Math.min(minLen, right - left + 1);
-      left++;
-    } //작으면 오른쪽이동
-    else {
+    if (sumVal < val) {
       right++;
       sumVal += arr[right];
+    } else if (sumVal >= val) {
+      minLength = Math.min(minLength, right - left + 1);
+      sumVal -= arr[left];
+      left++;
     }
   }
-
-  return minLen === Infinity ? 0 : minLen;
+  return minLength === Infinity ? 0 : minLength;
 }
 
-minSubArrayLen([2, 3, 1, 2, 4, 3], 7); // 2 -> because [4,3] is the smallest subarray
+console.log(minSubArrayLen([2, 3, 1, 2, 4, 3], 7)); // 2 -> because [4,3] is the smallest subarray
 minSubArrayLen([2, 1, 6, 5, 4], 9); // 2 -> because [5,4] is the smallest subarray
 minSubArrayLen([3, 1, 7, 11, 2, 9, 8, 21, 62, 33, 19], 52); // 1 -> because [62] is greater than 52
 minSubArrayLen([1, 4, 16, 22, 5, 7, 8, 9, 10], 39); // 3
