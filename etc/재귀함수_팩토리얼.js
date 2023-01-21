@@ -8,7 +8,7 @@ function factorial_(num) {
   return total;
 }
 
-console.log(factorial_(5));
+console.log(factorial_(3));
 
 //재귀함수
 function factorial(num) {
