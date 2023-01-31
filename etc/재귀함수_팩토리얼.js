@@ -17,4 +17,4 @@ function factorial(num) {
   return num * factorial(num - 1);
 }
 
-console.log(factorial(3));
+console.log(factorial(4));
