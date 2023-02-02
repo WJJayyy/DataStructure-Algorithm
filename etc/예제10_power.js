@@ -9,6 +9,7 @@ Write a function called power which accepts a base and an exponent. The function
 
 function power(bases, exponents) {
   if (exponents === 0) return 1;
+ 
   return bases * power(bases, exponents - 1);
 }
-console.log(power(2,4))
+console.log(power(2,0))
