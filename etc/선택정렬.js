@@ -8,15 +8,20 @@ function selectionSort(arr) {
       }
     }
     if (i !== lowest) {
+      console.log("*****************");
+      console.log(arr);
+      console.log("Swapping to: ");
       let temp = arr[i];
       arr[i] = arr[lowest];
       arr[lowest] = temp;
+      console.log(arr);
+      console.log("*****************");
     }
   }
   return arr;
 }
 
-console.log(selectionSort([34, 22, 10, 19, 17]));
+console.log("1", selectionSort([34, 22, 10, 19, 17]));
 
 //ES2015(ES6)
 function selectionSort_(arr) {
@@ -35,4 +40,4 @@ function selectionSort_(arr) {
   return arr;
 }
 
-selectionSort_([0, 2, 34, 22, 10, 19, 17]);
+console.log("2", selectionSort_([0, 2, 34, 22, 10, 19, 17]));
