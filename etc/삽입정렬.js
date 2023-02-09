@@ -1,4 +1,4 @@
-function insertionSort(arr) {
+function insertionSort_(arr) {
   let i, j;
 
   for (i = 1; i < arr.length; i++) {
@@ -8,12 +8,12 @@ function insertionSort(arr) {
       arr[j + 1] = arr[j];
     }
     arr[j + 1] = currentVal;
-    console.log(arr);
+    // console.log("arr", arr);
   }
   return arr;
 }
 
-console.log(insertionSort([2, 1, 9, 76, 4]));
+console.log("1", insertionSort_([6, 3, 5, 1, 9, 4, 8, 2, 7]));
 
 const insertionSort = (arr) => {
   for (let i = 1; i < arr.length; i++) {
@@ -29,4 +29,4 @@ const insertionSort = (arr) => {
   return arr;
 };
 
-console.log(insertionSort([6, 3, 5, 1, 9, 4, 8, 2, 7]));
+console.log("2", insertionSort([6, 3, 5, 1, 9, 4, 8, 2, 7]));
