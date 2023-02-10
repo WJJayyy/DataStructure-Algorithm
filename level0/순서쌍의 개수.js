@@ -6,4 +6,15 @@ function solution(n) {
   return answer;
 }
 
-console.log(solution(100));
+function solution(n) {
+  const answer = [];
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      answer.push(i);
+    }
+  }
+  console.log(answer);
+  return answer.length;
+}
+
+console.log(solution(20));
